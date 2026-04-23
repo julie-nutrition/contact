@@ -1,9 +1,7 @@
 import { LinkCard } from "./components/LinkCard";
-import { Leaf } from "./components/Leaf";
 import { buildVCardUrl } from "./lib/vcard";
 import {
   CalendarIcon,
-  GlobeIcon,
   InstagramIcon,
   MailIcon,
   UserPlusIcon,
@@ -12,7 +10,7 @@ import {
 const JULIE = {
   firstName: "Julie",
   lastName: "Bauza",
-  title: "Nutritionniste et chef à domicile",
+  title: "Nutritionniste et cheffe à domicile",
   email: "contact@julie-nutrition.fr",
   phone: "+33783809486",
   website: "https://julie-nutrition.fr",
@@ -29,7 +27,7 @@ function App() {
     title: JULIE.title,
     email: JULIE.email,
     phone: JULIE.phone,
-    website: JULIE.website,
+    calendar: JULIE.calendar,
     instagram: JULIE.instagram,
   });
 
@@ -39,18 +37,6 @@ function App() {
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_top,var(--color-cream-50),var(--color-cream-100)_60%,var(--color-cream-200))]"
-      />
-      <Leaf
-        aria-hidden
-        className="pointer-events-none absolute -left-24 -top-16 -z-10 h-80 w-80 rotate-[18deg] text-forest-500/15 sm:h-[28rem] sm:w-[28rem]"
-      />
-      <Leaf
-        aria-hidden
-        className="pointer-events-none absolute -right-20 top-1/3 -z-10 h-72 w-72 -rotate-[42deg] text-forest-500/10 sm:h-[24rem] sm:w-[24rem]"
-      />
-      <Leaf
-        aria-hidden
-        className="pointer-events-none absolute -bottom-24 left-1/2 -z-10 h-80 w-80 -translate-x-1/2 rotate-[150deg] text-forest-500/15 sm:h-[26rem] sm:w-[26rem]"
       />
 
       <main className="mx-auto flex w-full max-w-md flex-col items-center px-5 pb-16 pt-10 sm:max-w-lg sm:pt-16">
@@ -71,14 +57,14 @@ function App() {
         {/* Name + eyebrow */}
         <p className="mt-6 flex items-center gap-2 text-[0.72rem] font-semibold uppercase tracking-[0.22em] text-forest-500">
           <span className="inline-block h-px w-6 bg-forest-400" />
-          Batchcooking à domicile · Nutritionniste
+          Batchcooking à domicile
           <span className="inline-block h-px w-6 bg-forest-400" />
         </p>
         <h1 className="mt-3 text-center font-display text-5xl leading-[0.95] text-forest-700 sm:text-6xl">
           Julie Bauza
         </h1>
         <p className="mt-3 max-w-sm text-center text-base leading-relaxed text-forest-700/80">
-          Nutritionniste et chef à domicile. Bilan personnalisé, suivi sur
+          Nutritionniste et cheffe à domicile. Bilan personnalisé, suivi sur
           mesure et batch cooking à domicile pour une alimentation équilibrée et
           savoureuse.
         </p>
@@ -104,13 +90,13 @@ function App() {
             variant="accent"
             external
           />
-          <LinkCard
+          {/* <LinkCard
             href={JULIE.website}
             icon={<GlobeIcon />}
             label="Site web"
             hint="julie-nutrition.fr"
             external
-          />
+          /> */}
           <LinkCard
             href={JULIE.instagram}
             icon={<InstagramIcon />}

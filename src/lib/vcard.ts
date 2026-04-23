@@ -6,6 +6,7 @@ export type VCardInput = {
   phone?: string;
   website?: string;
   instagram?: string;
+  calendar?: string;
 };
 
 /**
@@ -27,6 +28,7 @@ export function buildVCardUrl(input: VCardInput): string {
   if (input.website) lines.push(`URL:${input.website}`);
   if (input.instagram)
     lines.push(`X-SOCIALPROFILE;TYPE=instagram:${input.instagram}`);
+  if (input.calendar) lines.push(`X-CALURI:${input.calendar}`);
 
   lines.push("END:VCARD");
 
