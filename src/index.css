@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: "Margin";
+  src: url("/fonts/Margin-Regular.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans:
+    "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  --font-display: "Margin", "Open Sans", ui-serif, Georgia, serif;
+
+  /* Brand palette pulled from julie-nutrition.fr */
+  --color-forest-50: #f2f7f3;
+  --color-forest-100: #dfeae1;
+  --color-forest-200: #b9d3be;
+  --color-forest-300: #8fb599;
+  --color-forest-400: #4f8a60;
+  --color-forest-500: #1f6a3b;
+  --color-forest-600: #0f5730;
+  --color-forest-700: #0b4a2a;
+  --color-forest-800: #083a21;
+  --color-forest-900: #062a18;
+
+  --color-cream-50: #fffaea;
+  --color-cream-100: #fbf3d5;
+  --color-cream-200: #f6e9b9;
+  --color-cream-300: #eedf9a;
+}
+
+:root {
+  color-scheme: light;
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--color-cream-100);
+  color: var(--color-forest-700);
+}
